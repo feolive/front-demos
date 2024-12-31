@@ -38,6 +38,7 @@ body{
     text-align: center;
     margin: 0 2rem;
     padding: 0.5rem 0 1rem;
+    border-radius: 0.4rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
     cursor: pointer;
@@ -45,6 +46,11 @@ body{
 
 .price-card:hover {
     transform: translateY(-20px);
+    --c-ribbon: #f94289;
+    --c-ribbon-text: #fff;
+    --c-ribbon-shadow: #ff619b;
+    --c-title: #f94289;
+    box-shadow: 0 0 3rem -1.5rem rgb(0,0,0,0.5);
 }
 
 .price-card__ribbon {

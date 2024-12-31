@@ -1,15 +1,22 @@
-body{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background-color: hsl(0, 1%, 32%);
 }
 
 /* show-up effect */
 .test-container{
-    position: absolute;
-    top: 30%;
-    left: 30%;
+    position: relative;
+    margin: 2rem 2rem;
     width: 200px;
     height: 100px;
     background-color: hsl(0, 0%, 94%);
@@ -91,13 +98,13 @@ body{
 
 /* swell effect */
 .square{
+    position: relative;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
     width: 300px;
     height: 300px;
     border-radius: 20px;
     background-color: lightcoral;
-    position: absolute;
-    top: 50%;
-    left: 50%;
 }
 
 .square.active{
@@ -164,6 +171,7 @@ body{
     border-radius: 50px;
     border: none;
     overflow: hidden;
+    box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.2);
 }
 .gleam span{
     position: relative;

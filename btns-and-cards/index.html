@@ -8,12 +8,18 @@
   </head>
   <body>
     <!-- box1 -->
+     <div>
+    <button style="margin-bottom: 0.5rem;" onclick="clickBtn()">click</button>
     <div class="test-container">
       <div id="no1">no.1</div>
       <div class="test">this is the no.2</div>
       <div id="no3">no.3</div>
     </div>
-<!-- box2 -->
+  </div>
+
+    <!-- box2 -->
+     <div>
+    <button style="margin-bottom: 2rem;" onclick="clickBtn2()">click2</button>
     <div class="square">
       <div id="content1" class="square-box">
         <div class="square-content">
@@ -35,15 +41,13 @@
         <input type="text" placeholder="ISBN" />
       </div>
     </div>
+  </div>
     <!-- box3 -->
     <div class="flow-light">
-      <p style="width: 150px; text-align: center;">Border-image flow</p>
+      <p style="width: 150px; text-align: center">Border-image flow</p>
     </div>
-    <button onclick="clickBtn()">click</button>
-    <button onclick="clickBtn2()">click2</button>
-    <button class="gleam" style="--clr: #ff5;"><span>按钮</span></button>
+    <button class="gleam" style="--clr: #ff5"><span>按鈕</span></button>
 
-    
     <script>
       function clickBtn() {
         document.querySelector(["#no1"]).classList.toggle("move-left");
@@ -65,7 +69,6 @@
         e.target.style.setProperty("--x", `${x}px`);
         e.target.style.setProperty("--y", `${y}px`);
       };
-
     </script>
   </body>
 </html>
