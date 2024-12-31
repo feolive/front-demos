@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- box1 -->
+    <div class="test-container">
+      <div id="no1">no.1</div>
+      <div class="test">this is the no.2</div>
+      <div id="no3">no.3</div>
+    </div>
+<!-- box2 -->
+    <div class="square">
+      <div id="content1" class="square-box">
+        <div class="square-content">
+          <p>Title:</p>
+          <input type="text" value="Harry Potter" />
+        </div>
+        <div class="square-content">
+          <p>Author:</p>
+          <input type="text" value="JK Rolling" />
+        </div>
+        <div class="square-content">
+          <p>ISBN:</p>
+          <input type="text" value="123456" />
+        </div>
+      </div>
+      <div id="content2" class="square-box hidden">
+        <input type="text" placeholder="Title" />
+        <input type="text" placeholder="Author" />
+        <input type="text" placeholder="ISBN" />
+      </div>
+    </div>
+    <!-- box3 -->
+    <div class="flow-light">
+      <p style="width: 150px; text-align: center;">Border-image flow</p>
+    </div>
+    <button onclick="clickBtn()">click</button>
+    <button onclick="clickBtn2()">click2</button>
+    <button class="gleam" style="--clr: #ff5;"><span>按钮</span></button>
+
+    
+    <script>
+      function clickBtn() {
+        document.querySelector(["#no1"]).classList.toggle("move-left");
+        document.querySelector(["#no3"]).classList.toggle("move-right");
+        document.querySelector(".test").classList.toggle("active");
+      }
+
+      const clickBtn2 = () => {
+        document.querySelector(["#content1"]).classList.toggle("hidden");
+        document.querySelector(["#content2"]).classList.toggle("active");
+        document.querySelector(".square").classList.toggle("active");
+      };
+      // gleam
+      let btn = document.querySelector(".gleam");
+      btn.onmousemove = function (e) {
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+
+        e.target.style.setProperty("--x", `${x}px`);
+        e.target.style.setProperty("--y", `${y}px`);
+      };
+
+    </script>
+  </body>
+</html>
