@@ -50,11 +50,11 @@ body{
 .price-card__ribbon {
     position: relative;
     padding: 2rem 1rem;
-    margin: 2rem 0.8rem 2rem;
+    margin: 2rem -0.8rem 2rem;
     background-color: var(--c-ribbon);
     transform: skew(0, -10deg);
     border-radius: 3px 0;
-    box-shadow: 0 2rem 1.2rem -2rem var(--c-ribbon-shadow);
+    box-shadow: 0 0rem 1.2rem 0.4rem var(--c-ribbon-shadow);
 }
 
 .price-card__ribbon::before, .price-card__ribbon::after {
